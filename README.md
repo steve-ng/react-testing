@@ -1,7 +1,11 @@
 ## Background
 
-Example to showcase unit test and puppet testing
+Example to showcase unit test and puppet testing.
 
+## Pre-requisite
+```
+Have npm installed https://www.npmjs.com/get-npm
+```
 
 ## Usage
 

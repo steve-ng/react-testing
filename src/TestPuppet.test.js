@@ -6,20 +6,20 @@ jest.setTimeout(30000)
 test('example of taking screenshot with puppeteer', async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://example.com');
-    await page.screenshot({path: 'example.png'});
+    await page.goto('https://sg.carousell.com/');
+    await page.screenshot({path: 'carousell.png'});
   
     await browser.close();
 })
 
 
-test('example of taking screenshot with puppeteer', async () => {
+test('example of testing carousell searching for car', async () => {
     // Headless false will mean it will spin up a chrome browser
     const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.goto('https://sg.carousell.com/');
 
-    // wait for 5 seconds to drag the screen to zoom
+    // wait for 5 seconds to drag the screen to load
     await page.waitFor(5000);
     await page.type('[placeholder="Search for an item or user..."]', 'Cars')
     await page.type('[value="Cars"]', String.fromCharCode(13))
@@ -28,6 +28,6 @@ test('example of taking screenshot with puppeteer', async () => {
     await page.waitFor(5000);
     expect(page.url()).toEqual("https://sg.carousell.com/search/Cars?")
 
-    await page.screenshot({path: 'carousell.png'});
+    await page.screenshot({path: 'carousell-2.png'});
     await browser.close();
 })
