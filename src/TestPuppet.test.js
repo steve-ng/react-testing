@@ -15,7 +15,7 @@ test('example of taking screenshot with puppeteer', async () => {
 
 test('example of testing carousell searching for car', async () => {
     // Headless false will mean it will spin up a chrome browser
-    const browser = await puppeteer.launch({headless: true});
+    const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
     await page.goto('https://sg.carousell.com/');
 
